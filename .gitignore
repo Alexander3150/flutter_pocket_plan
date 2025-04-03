@@ -1,0 +1,35 @@
+# Archivos/carpetas base de Flutter  
+.dart_tool/          # Cache y herramientas de Dart  
+.packages/          # Dependencias locales  
+.pub-cache/         # Cache de paquetes (pub)  
+.pub/               # Configuración de pub  
+build/              # Carpeta de builds (iOS/Android/Web)  
+.fvm/               # Si usan Flutter Version Management  
+
+# Archivos de entorno y configuración local  
+.env                # Variables de entorno  
+.env.*              # Variantes de entorno (ej: .env.dev, .env.prod)  
+.flutter-plugins    # Plugins (generado automáticamente)  
+.flutter-plugins-dependencies  
+.localized          # Internacionalización (si se genera automáticamente)  
+
+# Plataformas específicas  
+**/ios/Flutter/flutter_export_environment.sh  
+**/ios/Podfile.lock  
+**/ios/.symlinks/  
+**/android/.gradle/  
+**/android/app/build/  
+**/android/local.properties  # ¡Sensible! (claves de Android)  
+
+# IDEs y editores  
+.idea/              # JetBrains (Android Studio)  
+.vscode/            # VS Code (settings.json puede ser compartido)  
+*.iml               # Archivos de módulos de Android Studio  
+
+# Archivos generados por Flutter  
+*.lock.json  
+*.metadata          # Info del proyecto (generado por Flutter)  
+
+# Logs y temporales  
+*.log               # Logs de errores  
+pubspec.lock        # Dependencias exactas (puede omitirse si prefieren versiones flexibles)
