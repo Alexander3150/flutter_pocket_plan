@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(const MyApp());
@@ -56,6 +57,28 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
+  void abrirEnlace() async {
+    final uri = Uri.parse("https://docs.flutter.dev/ui");
+    try {
+      if (await canLaunchUrl(uri)) {
+        await launchUrl(
+          uri,
+          mode:
+              LaunchMode
+                  .externalApplication, // Esto fuerza a abrir en navegador externo
+        );
+      } else {
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text('No se pudo abrir el enlace')));
+      }
+    } catch (e) {
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text('Error: $e')));
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -109,6 +132,22 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
               ),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: abrirEnlace,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueAccent,
+                foregroundColor: Colors.white,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 24,
+                  vertical: 12,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              child: const Text("Flutter Virtual"),
             ),
           ],
         ),
