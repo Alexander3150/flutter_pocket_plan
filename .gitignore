@@ -1,35 +1,45 @@
-# Archivos/carpetas base de Flutter  
-.dart_tool/          # Cache y herramientas de Dart  
-.packages/          # Dependencias locales  
-.pub-cache/         # Cache de paquetes (pub)  
-.pub/               # Configuración de pub  
-build/              # Carpeta de builds (iOS/Android/Web)  
-.fvm/               # Si usan Flutter Version Management  
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
 
-# Archivos de entorno y configuración local  
-.env                # Variables de entorno  
-.env.*              # Variantes de entorno (ej: .env.dev, .env.prod)  
-.flutter-plugins    # Plugins (generado automáticamente)  
-.flutter-plugins-dependencies  
-.localized          # Internacionalización (si se genera automáticamente)  
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
 
-# Plataformas específicas  
-**/ios/Flutter/flutter_export_environment.sh  
-**/ios/Podfile.lock  
-**/ios/.symlinks/  
-**/android/.gradle/  
-**/android/app/build/  
-**/android/local.properties  # ¡Sensible! (claves de Android)  
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
 
-# IDEs y editores  
-.idea/              # JetBrains (Android Studio)  
-.vscode/            # VS Code (settings.json puede ser compartido)  
-*.iml               # Archivos de módulos de Android Studio  
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
 
-# Archivos generados por Flutter  
-*.lock.json  
-*.metadata          # Info del proyecto (generado por Flutter)  
+# Symbolication related
+app.*.symbols
 
-# Logs y temporales  
-*.log               # Logs de errores  
-pubspec.lock        # Dependencias exactas (puede omitirse si prefieren versiones flexibles)
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
