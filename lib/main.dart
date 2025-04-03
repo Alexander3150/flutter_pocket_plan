@@ -69,11 +69,13 @@ class _MyHomePageState extends State<MyHomePage> {
         );
       } else {
         ScaffoldMessenger.of(
+          // ignore: use_build_context_synchronously
           context,
         ).showSnackBar(SnackBar(content: Text('No se pudo abrir el enlace')));
       }
     } catch (e) {
       ScaffoldMessenger.of(
+        // ignore: use_build_context_synchronously
         context,
       ).showSnackBar(SnackBar(content: Text('Error: $e')));
     }
@@ -107,6 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 borderRadius: BorderRadius.circular(12),
                 boxShadow: [
                   BoxShadow(
+                    // ignore: deprecated_member_use
                     color: Colors.cyanAccent.withOpacity(0.8),
                     blurRadius: 10,
                     spreadRadius: 2,
